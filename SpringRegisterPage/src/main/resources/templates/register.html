@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+ 
+    <head>
+ 
+        <meta charset="UTF-8">
+ 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ 
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+ 
+        <title>STUDENTS REGISTER</title>
+ 
+        <link rel="stylesheet" href="register.css">
+ 
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel="stylesheet">
+ 
+    </head>
+	
+
+
+    <body>	
+		 <script>
+        function submitForm() {
+           
+            alert("register successful");
+
+        }
+    </script>
+		<marquee behavior="move" direction="right"><i class="bx bxs-game"></i></marquee>
+		
+        <section>
+ 
+                <div class="wrapper">
+ 
+                    <form action="#" th:action="@{/register}" th:object="${student}" method="post" >
+
+                        <h1>Register here</h1>
+
+                        <div class="input-box">
+                            <input type="text" th:field="*{firstName}" placeholder="first name eg.oscar" required>
+                            <i class="bx bxs-user"></i>
+                        </div>
+
+                        <div class="input-box">
+                            <input type="text" th:field="*{lastName}" placeholder="last name eg.oscar" required>
+                            <i class="bx bxs-user"></i>
+                        </div>
+
+                        <div class="input-box">
+                            <input type="text" th:field="*{email}" placeholder="email e.g.oscar@gmail.com" required>
+                            <i class="bx bxs-envelope"></i>
+                        </div>
+
+                        <div class="input-box">
+                            <input type="password" th:field="*{password}" placeholder="password eg. 14543" required>
+                            <i class="bx bxs-lock-alt"></i>  
+                        </div>   
+ 
+                        <button type="submit" class="btn">sign-in</button>
+
+                                      
+ 
+                    </form>
+
+                </div>
+
+        </section>        
+ 
+    </body>
+
+</html>
